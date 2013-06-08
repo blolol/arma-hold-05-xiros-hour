@@ -1,5 +1,6 @@
 _assault = _this select 0;
 _group = createGroup east;
+_targets = list xiros;
 
 _infantrySpawnPoints = [
 	"opforInfantrySpawn_0",
@@ -9,9 +10,6 @@ _infantrySpawnPoints = [
 	"opforInfantrySpawn_4"
 ];
 
-_targets = list xiros;
-_unitCount = floor(random 5) + 1;
-
 _infantryUnitTypes = [
 	"O_Soldier_F",    // Rifleman
 	"O_Soldier_AR_F", // Automatic rifleman
@@ -20,7 +18,11 @@ _infantryUnitTypes = [
 	"O_Soldier_LAT_F" // Rifleman (AT)
 ];
 
-for "_i" from 1 to _unitCount do {
+// Scale the number of spawned units to the active player count
+_liveTargets = { alive _x } count _targets;
+_spawnCount = floor(random (_liveTargets * 2)) + 1;
+
+for "_i" from 1 to _spawnCount do {
 	_unitType = (_infantryUnitTypes select floor(random count _infantryUnitTypes));
 
 	_unit = _group createUnit [_unitType, [0, 0, 0], _infantrySpawnPoints, 10, "NONE"];
