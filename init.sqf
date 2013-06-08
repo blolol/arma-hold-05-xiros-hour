@@ -24,15 +24,16 @@ if (!isServer) then {
 };
 
 _assault = compile preprocessFileLineNumbers "lib\assault.sqf";
+_assaultArgs = [_assault, []];
 
 if (headlessPresent) then {
 	if (!hasInterface && !isServer) then {
 		// Spawn AI on headless client
-		[_assault] spawn _assault;
+		_assaultArgs spawn _assault;
 	};
 } else {
 	if (isServer) then {
 		// Spawn AI on server
-		[_assault] spawn _assault;
+		_assaultArgs spawn _assault;
 	};
 };

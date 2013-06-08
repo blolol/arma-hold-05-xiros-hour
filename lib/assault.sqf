@@ -1,6 +1,11 @@
+/*
+ * Arguments:
+ *
+ * _this select 0 #=> This compiled script.
+ * _this select 1 #=> Array of all OPFOR infantry units spawned by this script.
+ */
 _assault = _this select 0;
-_group = createGroup east;
-_targets = list xiros;
+_infantryUnits = _this select 1;
 
 _infantrySpawnPoints = [
 	"opforInfantrySpawn_0",
@@ -18,9 +23,21 @@ _infantryUnitTypes = [
 	"O_Soldier_LAT_F" // Rifleman (AT)
 ];
 
-// Scale the number of spawned units to the active player count
+/*
+ * Scale the number of spawned infantry units to the active player count.
+ *
+ * The server will attempt to maintain a maximum of _maxInfantryUnits live infantry
+ * firing on the players, and no more than _maxSpawnCount infantry spawned per wave.
+ */
+_targets = list xiros;
 _liveTargets = { alive _x } count _targets;
-_spawnCount = floor(random (_liveTargets * 2)) + 1;
+_liveInfantryUnits = { alive _x } count _infantryUnits;
+
+_maxInfantryUnits = _liveTargets * 5;
+_maxSpawnCount = _maxInfantryUnits - _liveInfantryUnits;
+_spawnCount = floor(random _maxSpawnCount) + 1;
+
+_group = createGroup east;
 
 for "_i" from 1 to _spawnCount do {
 	_unitType = (_infantryUnitTypes select floor(random count _infantryUnitTypes));
@@ -35,7 +52,9 @@ for "_i" from 1 to _spawnCount do {
 
 	_unit doTarget (_targets select floor(random count _targets));
 	_unit setCombatMode "RED";
+
+	_infantryUnits set [count _infantryUnits, _unit];
 };
 
 sleep 10;
-[_assault] spawn _assault;
+[_assault, _infantryUnits] spawn _assault;
