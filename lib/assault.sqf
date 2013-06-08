@@ -2,11 +2,11 @@ _assault = _this select 0;
 _group = createGroup east;
 
 _spawnPoints = [
-	"opforSpawn_0",
-	"opforSpawn_1",
-	"opforSpawn_2",
-	"opforSpawn_3",
-	"opforSpawn_4"
+	"opforInfantrySpawn_0",
+	"opforInfantrySpawn_1",
+	"opforInfantrySpawn_2",
+	"opforInfantrySpawn_3",
+	"opforInfantrySpawn_4"
 ];
 
 _targets = list xiros;

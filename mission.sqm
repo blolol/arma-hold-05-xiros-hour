@@ -119,35 +119,35 @@ class Mission
 		class Item0
 		{
 			position[]={3730.2048,8.7366714,7702.6191};
-			name="opforSpawn_0";
+			name="opforInfantrySpawn_1";
 			type="Empty";
 			colorName="ColorOPFOR";
 		};
 		class Item1
 		{
 			position[]={3770.5293,3.5812182,7701.2822};
-			name="opforSpawn_1";
+			name="opforInfantrySpawn_3";
 			type="Empty";
 			colorName="ColorOPFOR";
 		};
 		class Item2
 		{
 			position[]={3802.0491,12.102893,7661.2061};
-			name="opforSpawn_2";
+			name="opforInfantrySpawn_4";
 			type="Empty";
 			colorName="ColorOPFOR";
 		};
 		class Item3
 		{
 			position[]={3688.0249,10.891561,7701.4277};
-			name="opforSpawn_3";
+			name="opforInfantrySpawn_0";
 			type="Empty";
 			colorName="ColorOPFOR";
 		};
 		class Item4
 		{
 			position[]={3741.0425,18.148083,7670.79};
-			name="opforSpawn_4";
+			name="opforInfantrySpawn_2";
 			type="Empty";
 			colorName="ColorOPFOR";
 		};
