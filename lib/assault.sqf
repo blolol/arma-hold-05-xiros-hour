@@ -24,8 +24,15 @@ _spawnCount = floor(random (_liveTargets * 2)) + 1;
 
 for "_i" from 1 to _spawnCount do {
 	_unitType = (_infantryUnitTypes select floor(random count _infantryUnitTypes));
-
 	_unit = _group createUnit [_unitType, [0, 0, 0], _infantrySpawnPoints, 10, "NONE"];
+
+	_unit setSkill ["aimingAccuracy", 0.15];
+	_unit setSkill ["aimingShake", 0.15];
+	_unit setSkill ["aimingSpeed", 0.15];
+	_unit setSkill ["spotDistance", 1];
+	_unit setSkill ["spotTime", 1];
+	_unit setSkill ["reloadSpeed", 0.5];
+
 	_unit doTarget (_targets select floor(random count _targets));
 	_unit setCombatMode "RED";
 };
