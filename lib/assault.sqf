@@ -1,0 +1,31 @@
+_assault = _this select 0;
+_group = createGroup east;
+
+_spawnPoints = [
+	"opforSpawn_0",
+	"opforSpawn_1",
+	"opforSpawn_2",
+	"opforSpawn_3",
+	"opforSpawn_4"
+];
+
+_targets = list xiros;
+_unitCount = floor(random 5) + 1;
+
+_unitTypes = [
+	"O_Soldier_F",    // Rifleman
+	"O_Soldier_AR_F", // Automatic rifleman
+	"O_Soldier_GL_F", // Grenadier
+	"O_soldier_M_F",  // Marksman
+	"O_Soldier_LAT_F" // Rifleman (AT)
+];
+
+for "_i" from 1 to _unitCount do {
+	_unitType = (_unitTypes select floor(random count _unitTypes));
+
+	_unit = _group createUnit [_unitType, [0, 0, 0], _spawnPoints, 10, "NONE"];
+	_unit doTarget (_targets select floor(random count _targets));
+};
+
+sleep 10;
+[_assault] spawn _assault;

@@ -1,0 +1,8 @@
+class Params {
+	class HeadlessClient {
+		title = "Headless Client";
+		values[] = {0, 1};
+		texts[] = {"Off", "On"};
+		default = 0;
+	};
+};

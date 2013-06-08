@@ -1,0 +1,268 @@
+version=12;
+class Mission
+{
+	addOns[]=
+	{
+		"A3_Characters_F_BLUFOR",
+		"a3_map_stratis",
+		"A3_Animals_F_Rabbit",
+		"a3_modules_f"
+	};
+	addOnsAuto[]=
+	{
+		"A3_Characters_F_BLUFOR",
+		"a3_modules_f",
+		"A3_Animals_F_Rabbit",
+		"a3_map_stratis"
+	};
+	randomSeed=2962400;
+	class Intel
+	{
+		briefingName="HOLD 05 Xiros Hour";
+		overviewText="Hold the island until the extraction force arrives.";
+		startWeather=0.29999998;
+		startWind=0.099999994;
+		startWaves=0.099999994;
+		forecastWeather=0.29999998;
+		forecastWind=0.099999994;
+		forecastWaves=0.099999994;
+		forecastLightnings=0.099999994;
+		year=2035;
+		month=7;
+		day=4;
+		hour=19;
+		startFogBase=0.001;
+		forecastFogBase=0.001;
+		startFogDecay=0.0049999999;
+		forecastFogDecay=0.0049999999;
+	};
+	class Groups
+	{
+		items=3;
+		class Item0
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={3781.8455,17.024553,7921.3828};
+					azimut=155.888;
+					id=0;
+					side="WEST";
+					vehicle="B_Soldier_F";
+					player="PLAYER COMMANDER";
+					leader=1;
+					skill=0.60000002;
+				};
+			};
+		};
+		class Item1
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={3767.175,10.922557,7947.2476};
+					special="NONE";
+					id=1;
+					side="LOGIC";
+					vehicle="SideBLUFOR_F";
+					leader=1;
+					skill=0.60000002;
+				};
+			};
+		};
+		class Item2
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={3761.5657,12.468766,7682.376};
+					special="NONE";
+					id=2;
+					side="LOGIC";
+					vehicle="SideOPFOR_F";
+					leader=1;
+					skill=0.60000002;
+				};
+			};
+		};
+	};
+	class Vehicles
+	{
+		items=1;
+		class Item0
+		{
+			position[]={3760.9243,9.5864,7953.3022};
+			special="NONE";
+			id=3;
+			side="AMBIENT LIFE";
+			vehicle="Rabbit_F";
+			player="PLAY CDG";
+			forceHeadlessClient=1;
+			skill=0.60000002;
+			text="headless";
+			init="this allowDamage false;";
+			description="Headless";
+		};
+	};
+	class Markers
+	{
+		items=5;
+		class Item0
+		{
+			position[]={3730.2048,8.7366714,7702.6191};
+			name="opforSpawn_0";
+			type="Empty";
+			colorName="ColorOPFOR";
+		};
+		class Item1
+		{
+			position[]={3770.5293,3.5812182,7701.2822};
+			name="opforSpawn_1";
+			type="Empty";
+			colorName="ColorOPFOR";
+		};
+		class Item2
+		{
+			position[]={3802.0491,12.102893,7661.2061};
+			name="opforSpawn_2";
+			type="Empty";
+			colorName="ColorOPFOR";
+		};
+		class Item3
+		{
+			position[]={3688.0249,10.891561,7701.4277};
+			name="opforSpawn_3";
+			type="Empty";
+			colorName="ColorOPFOR";
+		};
+		class Item4
+		{
+			position[]={3741.0425,18.148083,7670.79};
+			name="opforSpawn_4";
+			type="Empty";
+			colorName="ColorOPFOR";
+		};
+	};
+	class Sensors
+	{
+		items=1;
+		class Item0
+		{
+			position[]={3773.251,14.642675,7936.9648};
+			a=100;
+			b=100;
+			activationBy="WEST";
+			interruptable=1;
+			age="UNKNOWN";
+			name="xiros";
+			class Effects
+			{
+			};
+		};
+	};
+};
+class Intro
+{
+	addOns[]=
+	{
+		"a3_map_stratis"
+	};
+	addOnsAuto[]=
+	{
+		"a3_map_stratis"
+	};
+	randomSeed=15826733;
+	class Intel
+	{
+		timeOfChanges=1800.0002;
+		startWeather=0.30000001;
+		startWind=0.1;
+		startWaves=0.1;
+		forecastWeather=0.30000001;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		forecastLightnings=0.1;
+		year=2035;
+		month=7;
+		day=6;
+		hour=14;
+		minute=15;
+		startFogBase=0.001;
+		forecastFogBase=0.001;
+		startFogDecay=0.0049999999;
+		forecastFogDecay=0.0049999999;
+	};
+};
+class OutroWin
+{
+	addOns[]=
+	{
+		"a3_map_stratis"
+	};
+	addOnsAuto[]=
+	{
+		"a3_map_stratis"
+	};
+	randomSeed=7921545;
+	class Intel
+	{
+		timeOfChanges=1800.0002;
+		startWeather=0.30000001;
+		startWind=0.1;
+		startWaves=0.1;
+		forecastWeather=0.30000001;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		forecastLightnings=0.1;
+		year=2035;
+		month=7;
+		day=6;
+		hour=14;
+		minute=15;
+		startFogBase=0.001;
+		forecastFogBase=0.001;
+		startFogDecay=0.0049999999;
+		forecastFogDecay=0.0049999999;
+	};
+};
+class OutroLoose
+{
+	addOns[]=
+	{
+		"a3_map_stratis"
+	};
+	addOnsAuto[]=
+	{
+		"a3_map_stratis"
+	};
+	randomSeed=15387072;
+	class Intel
+	{
+		timeOfChanges=1800.0002;
+		startWeather=0.30000001;
+		startWind=0.1;
+		startWaves=0.1;
+		forecastWeather=0.30000001;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		forecastLightnings=0.1;
+		year=2035;
+		month=7;
+		day=6;
+		hour=14;
+		minute=15;
+		startFogBase=0.001;
+		forecastFogBase=0.001;
+		startFogDecay=0.0049999999;
+		forecastFogDecay=0.0049999999;
+	};
+};
