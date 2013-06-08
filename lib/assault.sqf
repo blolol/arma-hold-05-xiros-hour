@@ -1,7 +1,7 @@
 _assault = _this select 0;
 _group = createGroup east;
 
-_spawnPoints = [
+_infantrySpawnPoints = [
 	"opforInfantrySpawn_0",
 	"opforInfantrySpawn_1",
 	"opforInfantrySpawn_2",
@@ -23,7 +23,7 @@ _unitTypes = [
 for "_i" from 1 to _unitCount do {
 	_unitType = (_unitTypes select floor(random count _unitTypes));
 
-	_unit = _group createUnit [_unitType, [0, 0, 0], _spawnPoints, 10, "NONE"];
+	_unit = _group createUnit [_unitType, [0, 0, 0], _infantrySpawnPoints, 10, "NONE"];
 	_unit doTarget (_targets select floor(random count _targets));
 	_unit setCombatMode "RED";
 };
