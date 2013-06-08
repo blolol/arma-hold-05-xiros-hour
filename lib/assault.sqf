@@ -25,6 +25,7 @@ for "_i" from 1 to _unitCount do {
 
 	_unit = _group createUnit [_unitType, [0, 0, 0], _spawnPoints, 10, "NONE"];
 	_unit doTarget (_targets select floor(random count _targets));
+	_unit setCombatMode "RED";
 };
 
 sleep 10;
